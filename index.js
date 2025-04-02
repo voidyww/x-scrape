@@ -66,7 +66,8 @@ app.post("/api/scrape-image", async (req, res) => {
 
     } catch (error) {
         console.error("Server error:", error);
-        res.status(500).json({ error: "Server error" });
+        res.status(500).json({ error: "Server error", details: error.message });
+
     }
 });
 
