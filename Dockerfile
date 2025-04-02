@@ -10,6 +10,6 @@ RUN npx playwright install --with-deps
 
 COPY . .
 
-EXPOSE 10000
+EXPOSE 3000
 
 CMD ["node", "index.js"]
