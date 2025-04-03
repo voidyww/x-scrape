@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/playwright:v1.43.0-jammy
 WORKDIR /app
 
 # Copy package files and install Node.js dependencies (including Playwright)
-COPY package.json package-lock.json ./ 
+COPY package.json ./
 RUN npm install
 
 # **Install Playwright browsers** (Chromium, etc.) in the image
