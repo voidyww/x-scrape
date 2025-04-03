@@ -23,7 +23,7 @@ app.post("/api/scrape-image", async (req, res) => {
         try {
             page = await browser.newPage();
             await page.goto(communityURL, { waitUntil: "domcontentloaded", timeout: 30000 });
-            await page.waitForSelector('h2', { timeout: 5000 });
+            await page.waitForSelector('h2', { timeout: 20000 });
 
             const scrapedData = await page.evaluate(() => {
                 const imageSelectors = [
